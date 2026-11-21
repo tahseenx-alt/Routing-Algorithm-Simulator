@@ -1,0 +1,38 @@
+{
+  "routers": [
+    {"id": "A", "x": 90, "y": 100},
+    {"id": "B", "x": 280, "y": 80},
+    {"id": "C", "x": 480, "y": 100},
+    {"id": "D", "x": 670, "y": 90},
+    {"id": "E", "x": 100, "y": 270},
+    {"id": "F", "x": 290, "y": 280},
+    {"id": "G", "x": 480, "y": 260},
+    {"id": "H", "x": 670, "y": 280},
+    {"id": "I", "x": 90, "y": 450},
+    {"id": "J", "x": 280, "y": 460},
+    {"id": "K", "x": 480, "y": 450},
+    {"id": "L", "x": 670, "y": 450}
+  ],
+  "links": [
+    {"a": "A", "b": "B", "delay_ms": 5, "active": true},
+    {"a": "A", "b": "E", "delay_ms": 3, "active": true},
+    {"a": "A", "b": "F", "delay_ms": 9, "active": true},
+    {"a": "B", "b": "C", "delay_ms": 18, "active": true},
+    {"a": "B", "b": "F", "delay_ms": 2, "active": true},
+    {"a": "C", "b": "D", "delay_ms": 4, "active": true},
+    {"a": "C", "b": "G", "delay_ms": 6, "active": true},
+    {"a": "D", "b": "G", "delay_ms": 17, "active": true},
+    {"a": "D", "b": "H", "delay_ms": 25, "active": true},
+    {"a": "E", "b": "F", "delay_ms": 7, "active": true},
+    {"a": "E", "b": "I", "delay_ms": 4, "active": true},
+    {"a": "F", "b": "G", "delay_ms": 3, "active": true},
+    {"a": "F", "b": "J", "delay_ms": 20, "active": true},
+    {"a": "G", "b": "H", "delay_ms": 2, "active": true},
+    {"a": "G", "b": "J", "delay_ms": 8, "active": true},
+    {"a": "G", "b": "K", "delay_ms": 5, "active": true},
+    {"a": "H", "b": "L", "delay_ms": 1, "active": true},
+    {"a": "I", "b": "J", "delay_ms": 6, "active": true},
+    {"a": "J", "b": "K", "delay_ms": 3, "active": true},
+    {"a": "K", "b": "L", "delay_ms": 30, "active": true}
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "routers": [
+    {"id": "A", "x": 120, "y": 270},
+    {"id": "B", "x": 300, "y": 120},
+    {"id": "C", "x": 300, "y": 420},
+    {"id": "D", "x": 520, "y": 150},
+    {"id": "E", "x": 560, "y": 400}
+  ],
+  "links": [
+    {"a": "A", "b": "B", "delay_ms": 4, "active": true},
+    {"a": "A", "b": "C", "delay_ms": 2, "active": true},
+    {"a": "B", "b": "C", "delay_ms": 1, "active": true},
+    {"a": "B", "b": "D", "delay_ms": 5, "active": true},
+    {"a": "C", "b": "D", "delay_ms": 9, "active": true},
+    {"a": "C", "b": "E", "delay_ms": 8, "active": true},
+    {"a": "D", "b": "E", "delay_ms": 3, "active": true}
+  ]
+}

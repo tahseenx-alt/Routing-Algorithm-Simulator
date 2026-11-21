@@ -1,0 +1,28 @@
+{
+  "routers": [
+    {"id": "A", "x": 100, "y": 270},
+    {"id": "B", "x": 240, "y": 110},
+    {"id": "C", "x": 240, "y": 430},
+    {"id": "D", "x": 400, "y": 270},
+    {"id": "E", "x": 400, "y": 90},
+    {"id": "F", "x": 560, "y": 110},
+    {"id": "G", "x": 560, "y": 430},
+    {"id": "H", "x": 690, "y": 270}
+  ],
+  "links": [
+    {"a": "A", "b": "B", "delay_ms": 3, "active": true},
+    {"a": "A", "b": "C", "delay_ms": 5, "active": true},
+    {"a": "B", "b": "C", "delay_ms": 2, "active": true},
+    {"a": "B", "b": "D", "delay_ms": 4, "active": true},
+    {"a": "B", "b": "E", "delay_ms": 6, "active": true},
+    {"a": "C", "b": "D", "delay_ms": 3, "active": true},
+    {"a": "C", "b": "G", "delay_ms": 9, "active": true},
+    {"a": "D", "b": "E", "delay_ms": 2, "active": true},
+    {"a": "D", "b": "F", "delay_ms": 7, "active": true},
+    {"a": "D", "b": "G", "delay_ms": 4, "active": true},
+    {"a": "E", "b": "F", "delay_ms": 3, "active": true},
+    {"a": "F", "b": "G", "delay_ms": 6, "active": true},
+    {"a": "F", "b": "H", "delay_ms": 2, "active": true},
+    {"a": "G", "b": "H", "delay_ms": 5, "active": true}
+  ]
+}
