@@ -1,0 +1,11 @@
+{
+  "routers": [
+    {"id": "A", "x": 150, "y": 270},
+    {"id": "B", "x": 380, "y": 270},
+    {"id": "C", "x": 610, "y": 270}
+  ],
+  "links": [
+    {"a": "A", "b": "B", "delay_ms": 1, "active": true},
+    {"a": "B", "b": "C", "delay_ms": 1, "active": true}
+  ]
+}
