@@ -35,27 +35,67 @@ Windows, macOS and Linux.
 
 ## Installation and running
 
+You need Python 3.10 or newer. All commands below are run from the
+`routing_simulator` folder inside this repository.
+
 ```bash
-cd routing_simulator
+git clone https://github.com/tahseenx-alt/Routing-Algorithm-Simulator.git
+cd Routing-Algorithm-Simulator/routing_simulator
 pip install -r requirements.txt
 python main.py        # start the application
 pytest                # run the test suite (about 500 tests, a few seconds)
 ```
 
-Tkinter is part of the python.org installers for Windows and macOS. On
-Ubuntu/Debian, install it with `sudo apt install python3-tk python3-pil.imagetk`.
+### Windows
+
+Install Python from [python.org](https://www.python.org/downloads/) and tick
+"Add python.exe to PATH" during setup. Tkinter is included. Then run the
+commands above in Command Prompt or PowerShell.
+
+### macOS
+
+The python.org installer includes Tkinter, so the commands above work as they
+are (use `python3` and `pip3` if `python` is not found).
+
+If you use **Homebrew** Python instead:
+
+1. Homebrew Python does not include Tkinter. Install the matching package for
+   your Python version (check it with `python3 --version`), for example:
+   ```bash
+   brew install python-tk@3.12
+   ```
+2. Homebrew Python does not allow `pip install` into the system Python, so
+   create a virtual environment inside `routing_simulator` first:
+   ```bash
+   cd Routing-Algorithm-Simulator/routing_simulator
+   python3 -m venv .venv
+   source .venv/bin/activate
+   pip install -r requirements.txt
+   python main.py
+   ```
+   Run `source .venv/bin/activate` again each time you open a new terminal.
+
+### Linux (Ubuntu/Debian)
+
+```bash
+sudo apt install python3-tk python3-pil.imagetk
+```
+
 The second package is needed by Matplotlib's Tk backend.
 
 ## Project structure
 
 ```
-routing_simulator/
-├── main.py                 entry point
-├── core/                   network model, settings, packet simulation, metrics, JSON storage
-├── algorithms/             the five algorithms + shared distance-vector engine (no Tkinter)
-├── gui/                    Tkinter windows, canvas, panels, Matplotlib charts
-├── samples/                small, medium, large, count_to_infinity, triangle_loop
-└── tests/                  pytest tests (NetworkX is used only here, as a reference)
+Routing-Algorithm-Simulator/
+├── README.md               this file
+└── routing_simulator/
+    ├── main.py             entry point
+    ├── requirements.txt    matplotlib, networkx, pytest
+    ├── core/               network model, settings, packet simulation, metrics, JSON storage
+    ├── algorithms/         the five algorithms + shared distance-vector engine (no Tkinter)
+    ├── gui/                Tkinter windows, canvas, panels, Matplotlib charts
+    ├── samples/            small, medium, large, count_to_infinity, triangle_loop
+    └── tests/              pytest tests (NetworkX is used only here, as a reference)
 ```
 
 Algorithm logic never imports Tkinter. Each algorithm returns a
@@ -172,7 +212,7 @@ steps.
 
 ## Tests
 
-`pytest` checks, among other things:
+Run `pytest` from the `routing_simulator` folder. It checks, among other things:
 
 - Dijkstra and Bellman-Ford distances equal NetworkX
   (`single_source_dijkstra_path_length` / `single_source_bellman_ford_path_length`,
